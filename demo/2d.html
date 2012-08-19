@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="800" height="500" style="border:1px solid #c3c3c3;">
+Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var rect = document.getElementById("rectangle")
+createRectangle();
+createCircle();
+createLine();
+createText();
+createTriangle();
+function createRectangle(){
+    ctx.fillStyle="#F00";
+    ctx.fillRect(100,100,200,350);
+}
+function createCircle(){
+    ctx.fillStyle="#0F0";
+    ctx.arc(450,180,100,0,Math.PI*2,true);
+    ctx.fill();
+}
+function createLine(){
+    ctx.moveTo(10,10);
+    ctx.lineTo(300,50);
+    ctx.stroke();
+}
+
+function createText(){
+    ctx.fillStyle    = '#00f';
+    ctx.font         = 'italic 30px sans-serif';
+    ctx.fillText  ('Uday, Welcome you all', 250, 485);
+}
+
+function createTriangle(){
+    ctx.fillStyle   = '#0f0';
+    ctx.moveTo(50, 50); 
+    ctx.lineTo(150, 50);
+    ctx.lineTo(50, 150);
+    ctx.lineTo(50, 50);
+    ctx.fill();
+}
+</script>
+</body>
+</html>
